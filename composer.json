@@ -1,11 +1,11 @@
 {
     "name": "atelierspierrot/media-processing",
     "type": "library",
-    "version":"0.0.1",
+    "version":"0.0.2",
     "title": "Media Processing",
     "description": "A package to manipulate media files such as images.",
     "keywords": ["file", "media", "filter"],
-    "homepage": "https://github.com/atelierspierrot/media-processing",
+    "homepage": "http://github.com/atelierspierrot/media-processing",
     "license": "GPL-3.0",
     "authors": [{
             "name": "Les Ateliers Pierrot & contributors",

@@ -199,8 +199,8 @@ class ImageFilter
 					$_fltr = new $_filter_cls(
 						$this->source_file,
 						$this->buildSourceFileHandler(),
-						is_array($this->filter_options_stack) && isset($this->filter_options_stack[$_id]) ?
-							$this->filter_options_stack[$_id] : null
+						is_array($this->filters_options_stack) && isset($this->filters_options_stack[$_id]) ?
+							$this->filters_options_stack[$_id] : null
 					);
 					
 					$_target_tmp_fn = $_fltr->getTargetFilename( $this->getTargetFilename() );
