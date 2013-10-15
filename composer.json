@@ -1,7 +1,6 @@
 {
     "name": "atelierspierrot/media-processing",
     "type": "library",
-    "version":"0.0.2",
     "title": "Media Processing",
     "description": "A package to manipulate media files such as images.",
     "keywords": ["file", "media", "filter"],
@@ -14,13 +13,18 @@
     }],
     "require": {
         "php": ">=5.3.0",
-        "atelierspierrot/patterns": "dev-master",
-        "atelierspierrot/library": "dev-master",
-        "atelierspierrot/webfilesystem": "dev-master"
+        "atelierspierrot/patterns": "1.*",
+        "atelierspierrot/library": "1.*",
+        "atelierspierrot/webfilesystem": "1.*"
     },
     "require-dev": {
         "sami/sami": "dev-master",
         "phpmd/phpmd" : "1.4.*"
     },
-    "autoload": { "psr-0": { "MediaProcessing": "src/" } }
+    "autoload": { "psr-0": { "MediaProcessing": "src/" } },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
