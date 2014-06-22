@@ -8,9 +8,9 @@ A package to manipulate media files such as images.
 
 >    Media Processing
 
->    https://github.com/atelierspierrot/media-processing
+>    http://github.com/atelierspierrot/media-processing
 
->    Copyleft 2013, Pierre Cassat and contributors
+>    Copyleft 2013-2014, Pierre Cassat and contributors
 
 >    Licensed under the GPL Version 3 license.
 
