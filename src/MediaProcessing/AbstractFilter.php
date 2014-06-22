@@ -16,23 +16,36 @@ use \MediaProcessing\MediaFile;
 abstract class AbstractFilter
 {
 
-	protected $source_file;
-	protected $source_handler;
-	protected $target_filename;
+    /**
+     * @var \MediaProcessing\MediaFile
+     */
+    protected $source_file;
 
-	protected $options = array();
+    /**
+     * @var resource
+     */
+    protected $source_handler;
+
+    /**
+     * @var string
+     */
+    protected $target_filename;
+
+    /**
+     * @var array
+     */
+    protected $options = array();
 
     /**
      * Construction of a filter
      *
-     * @param object $source_file The source file to work on, as a "\MediaProcessing\MediaFile" object
-     * @param resource $source_handler A resource of temporary image created in MIME type of the source
-     * @param array $options A set of options to override default options
-     *
-     * @throws InvalidArgumentException if the `$source_handler` is not a valid resource
-     */	
+     * @param   \MediaProcessing\MediaFile $source_file The source file to work on
+     * @param   resource $source_handler A resource of temporary image created in MIME type of the source
+     * @param   array $options A set of options to override default options
+     * @throws  \InvalidArgumentException if the `$source_handler` is not a valid resource
+     */
     public function __construct(MediaFile $source_file, $source_handler, $options = null)
-	{
+    {
         $this->source_file = $source_file;
         if (!is_resource($source_handler)) {
             throw new \InvalidArgumentException(
@@ -41,10 +54,10 @@ abstract class AbstractFilter
             );
         }
         $this->source_handler = $source_handler;
-		if (!is_null($options)) {
-		    $this->options = array_merge($this->options, $options);
-		}
-	}
+        if (!is_null($options)) {
+            $this->options = array_merge($this->options, $options);
+        }
+    }
 
 }
 
