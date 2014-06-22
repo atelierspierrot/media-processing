@@ -12,6 +12,7 @@
             <li><a href="../../classes.html">Classes</a></li>
                             <li><a href="../../namespaces.html">Namespaces</a></li>
                         <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
             <li><a href="../../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../../MediaProcessing/ImageFilter.html">MediaProcessing\ImageFilter</a>\ImageFilter</h1>
     </div>
         <div class="content">
-                <p>class    <strong>ImageFilter</strong></p>
+                <p>    class
+    <strong>ImageFilter</strong></p>
 
     
     
@@ -31,7 +33,7 @@
             <table>
                     <tr>
                 <td class="type" id="property_tmp_directory">
-                    static                                        
+                    static                                        string
                 </td>
                 <td>$tmp_directory</td>
                 <td class="last">
@@ -48,7 +50,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>($source = null, $source_content = null, $filter = null, $filter_options = null, $target_filename = null)
+                    <a href="#method___construct">__construct</a>(string $source = null, string $source_content = null, string|array $filter = null, array $filter_options = null, string $target_filename = null)
                     <p>
 </p>
                 </td>
@@ -56,11 +58,11 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_setSourceFile">setSourceFile</a>(string $source)
-                    <p>Creates and stores a "\Lib\File" object of the source file</p>
+                    <p>Creates and stores a "\MediaProcessing\MediaFile" object of the source file</p>
                 </td>
                 <td></td>
             </tr>
@@ -76,10 +78,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_setTargetFilename">setTargetFilename</a>($filename)
+                    <a href="#method_setTargetFilename">setTargetFilename</a>(string $filename)
                     <p>Set the target filename</p>
                 </td>
                 <td></td>
@@ -106,7 +108,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_addFilter">addFilter</a>(string $filter, array $filter_options = null)
@@ -116,7 +118,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_setFilters">setFilters</a>(array $filters, array $filters_options = null)
@@ -126,7 +128,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_reset">reset</a>()
@@ -136,7 +138,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    void
+                    <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
                 </td>
                 <td class="last">
                     <a href="#method_resetFilters">resetFilters</a>()
@@ -166,7 +168,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    <abbr title="MediaProcessing\ImageFilter\resource">resource</abbr>
+                    resource
                 </td>
                 <td class="last">
                     <a href="#method_buildSourceFileHandler">buildSourceFileHandler</a>()
@@ -179,7 +181,7 @@
                     bool
                 </td>
                 <td class="last">
-                    <a href="#method_writeTargetFileHandler">writeTargetFileHandler</a>(<abbr title="MediaProcessing\ImageFilter\resource">resource</abbr> $_handler, string $filename)
+                    <a href="#method_writeTargetFileHandler">writeTargetFileHandler</a>(resource $_handler, string $filename)
                     <p>Write the target handler in a real file</p>
                 </td>
                 <td></td>
@@ -199,7 +201,7 @@
                     static&nbsp;array
                 </td>
                 <td class="last">
-                    <a href="#method_resizeWidthHeight">resizeWidthHeight</a>(<abbr title="MediaProcessing\ImageFilter\num">num</abbr> $original_width, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $original_height, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $max_width, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $max_height, bool $associative = false)
+                    <a href="#method_resizeWidthHeight">resizeWidthHeight</a>(int $original_width, int $original_height, int $max_width, int $max_height, bool $associative = false)
                     <p>Recalculate width &amp; height conserving the original ratio</p>
                 </td>
                 <td></td>
@@ -210,9 +212,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 39</div>
+        <div class="location">at line 63</div>
         <code>            public            
-    <strong>__construct</strong>($source = null, $source_content = null, $filter = null, $filter_options = null, $target_filename = null)</code>
+    <strong>__construct</strong>(string $source = null, string $source_content = null, string|array $filter = null, array $filter_options = null, string $target_filename = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -224,31 +226,27 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$source</td>
-                <td>
-</td>
+                <td>The source image path</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$source_content</td>
-                <td>
-</td>
+                <td>The source image content (only used if no path is set)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string|array</td>
                 <td>$filter</td>
-                <td>
-</td>
+                <td>A filter name or a list of filters</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$filter_options</td>
-                <td>
-</td>
+                <td>An array of filter options (if the $filter arg is an array, the options must be ordered as $filters)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$target_filename</td>
                 <td>
 </td>
@@ -262,12 +260,12 @@
     </div>
 
                 <h3 id="method_setSourceFile">
-        <div class="location">at line 70</div>
-        <code>            public            void
+        <div class="location">at line 95</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>setSourceFile</strong>(string $source)</code>
     </h3>
     <div class="details">
-        <p>Creates and stores a "\Lib\File" object of the source file</p>
+        <p>Creates and stores a "\MediaProcessing\MediaFile" object of the source file</p>
         <p>
 </p>
         <div class="tags">
@@ -277,7 +275,7 @@
                     <tr>
                 <td>string</td>
                 <td>$source</td>
-                <td>the source image filepath</td>
+                <td>the source image file path</td>
             </tr>
             </table>
 
@@ -286,19 +284,28 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the file doesn't exist or is not an image</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_getSourceFile">
-        <div class="location">at line 92</div>
+        <div class="location">at line 119</div>
         <code>            public            object
     <strong>getSourceFile</strong>()</code>
     </h3>
@@ -323,9 +330,9 @@
     </div>
 
                 <h3 id="method_setTargetFilename">
-        <div class="location">at line 101</div>
-        <code>            public            void
-    <strong>setTargetFilename</strong>($filename)</code>
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
+    <strong>setTargetFilename</strong>(string $filename)</code>
     </h3>
     <div class="details">
         <p>Set the target filename</p>
@@ -336,7 +343,7 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$filename</td>
                 <td>
 </td>
@@ -348,7 +355,7 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -360,7 +367,7 @@
     </div>
 
                 <h3 id="method_getTargetFilename">
-        <div class="location">at line 110</div>
+        <div class="location">at line 141</div>
         <code>            public            string
     <strong>getTargetFilename</strong>()</code>
     </h3>
@@ -385,7 +392,7 @@
     </div>
 
                 <h3 id="method_getTargetWebPath">
-        <div class="location">at line 119</div>
+        <div class="location">at line 151</div>
         <code>            public            string
     <strong>getTargetWebPath</strong>()</code>
     </h3>
@@ -410,8 +417,8 @@
     </div>
 
                 <h3 id="method_addFilter">
-        <div class="location">at line 130</div>
-        <code>            public            void
+        <div class="location">at line 163</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>addFilter</strong>(string $filter, array $filter_options = null)</code>
     </h3>
     <div class="details">
@@ -439,7 +446,7 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -451,8 +458,8 @@
     </div>
 
                 <h3 id="method_setFilters">
-        <div class="location">at line 144</div>
-        <code>            public            void
+        <div class="location">at line 179</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>setFilters</strong>(array $filters, array $filters_options = null)</code>
     </h3>
     <div class="details">
@@ -480,7 +487,7 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -501,8 +508,8 @@
     </div>
 
                 <h3 id="method_reset">
-        <div class="location">at line 155</div>
-        <code>            public            void
+        <div class="location">at line 192</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>reset</strong>()</code>
     </h3>
     <div class="details">
@@ -515,7 +522,7 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -527,8 +534,8 @@
     </div>
 
                 <h3 id="method_resetFilters">
-        <div class="location">at line 164</div>
-        <code>            public            void
+        <div class="location">at line 203</div>
+        <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>resetFilters</strong>()</code>
     </h3>
     <div class="details">
@@ -541,7 +548,7 @@
 
                     <table>
         <tr>
-            <td>void</td>
+            <td><a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -553,7 +560,7 @@
     </div>
 
                 <h3 id="method_getCache">
-        <div class="location">at line 175</div>
+        <div class="location">at line 216</div>
         <code>            public            bool|string
     <strong>getCache</strong>(string $filename)</code>
     </h3>
@@ -588,7 +595,7 @@
     </div>
 
                 <h3 id="method_process">
-        <div class="location">at line 190</div>
+        <div class="location">at line 235</div>
         <code>            public            <a href="../../MediaProcessing/ImageFilter/ImageFilter.html"><abbr title="MediaProcessing\ImageFilter\ImageFilter">ImageFilter</abbr></a>
     <strong>process</strong>()</code>
     </h3>
@@ -608,13 +615,30 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the "process" method does not return a resource</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the filter can't be found</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the filter is empty</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_buildSourceFileHandler">
-        <div class="location">at line 245</div>
-        <code>            public            <abbr title="MediaProcessing\ImageFilter\resource">resource</abbr>
+        <div class="location">at line 291</div>
+        <code>            public            resource
     <strong>buildSourceFileHandler</strong>()</code>
     </h3>
     <div class="details">
@@ -627,7 +651,7 @@
 
                     <table>
         <tr>
-            <td><abbr title="MediaProcessing\ImageFilter\resource">resource</abbr></td>
+            <td>resource</td>
             <td>An image resource</td>
         </tr>
     </table>
@@ -637,8 +661,8 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Throws">Throws</abbr></td>
-                <td>a RuntimeException if the extension is not standard</td>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the extension is not standard</td>
             </tr>
             </table>
 
@@ -647,9 +671,9 @@
     </div>
 
                 <h3 id="method_writeTargetFileHandler">
-        <div class="location">at line 266</div>
+        <div class="location">at line 313</div>
         <code>            public            bool
-    <strong>writeTargetFileHandler</strong>(<abbr title="MediaProcessing\ImageFilter\resource">resource</abbr> $_handler, string $filename)</code>
+    <strong>writeTargetFileHandler</strong>(resource $_handler, string $filename)</code>
     </h3>
     <div class="details">
         <p>Write the target handler in a real file</p>
@@ -660,7 +684,7 @@
 
                     <table>
                     <tr>
-                <td><abbr title="MediaProcessing\ImageFilter\resource">resource</abbr></td>
+                <td>resource</td>
                 <td>$_handler</td>
                 <td>The resource image handler to write in the target file</td>
             </tr>
@@ -686,8 +710,8 @@
 
                     <table>
                     <tr>
-                <td><abbr title="Throws">Throws</abbr></td>
-                <td>a RuntimeException if the extension is not standard</td>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>if the extension is not standard</td>
             </tr>
             </table>
 
@@ -696,7 +720,7 @@
     </div>
 
                 <h3 id="method_buildSourceFileFromContent">
-        <div class="location">at line 294</div>
+        <div class="location">at line 341</div>
         <code>            public            void
     <strong>buildSourceFileFromContent</strong>(string $source_content)</code>
     </h3>
@@ -740,9 +764,9 @@
     </div>
 
                 <h3 id="method_resizeWidthHeight">
-        <div class="location">at line 320</div>
+        <div class="location">at line 368</div>
         <code>        static    public            array
-    <strong>resizeWidthHeight</strong>(<abbr title="MediaProcessing\ImageFilter\num">num</abbr> $original_width, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $original_height, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $max_width, <abbr title="MediaProcessing\ImageFilter\num">num</abbr> $max_height, bool $associative = false)</code>
+    <strong>resizeWidthHeight</strong>(int $original_width, int $original_height, int $max_width, int $max_height, bool $associative = false)</code>
     </h3>
     <div class="details">
         <p>Recalculate width &amp; height conserving the original ratio</p>
@@ -753,22 +777,22 @@
 
                     <table>
                     <tr>
-                <td><abbr title="MediaProcessing\ImageFilter\num">num</abbr></td>
+                <td>int</td>
                 <td>$original_width</td>
                 <td>The original width value, in pixels</td>
             </tr>
                     <tr>
-                <td><abbr title="MediaProcessing\ImageFilter\num">num</abbr></td>
+                <td>int</td>
                 <td>$original_height</td>
                 <td>The original height value, in pixels</td>
             </tr>
                     <tr>
-                <td><abbr title="MediaProcessing\ImageFilter\num">num</abbr></td>
+                <td>int</td>
                 <td>$max_width</td>
                 <td>The maximum width value, in pixels</td>
             </tr>
                     <tr>
-                <td><abbr title="MediaProcessing\ImageFilter\num">num</abbr></td>
+                <td>int</td>
                 <td>$max_height</td>
                 <td>The maximum height value, in pixels</td>
             </tr>

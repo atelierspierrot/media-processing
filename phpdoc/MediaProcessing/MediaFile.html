@@ -12,6 +12,7 @@
             <li><a href="../classes.html">Classes</a></li>
                             <li><a href="../namespaces.html">Namespaces</a></li>
                         <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
             <li><a href="../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../MediaProcessing.html">MediaProcessing</a>\MediaFile</h1>
     </div>
         <div class="content">
-                <p>class    <strong>MediaFile</strong>        extends <abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></p>
+                <p>    class
+    <strong>MediaFile</strong>        extends <abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></p>
 
     
     
@@ -35,7 +37,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>($file_name, $client_file_name = null, $root_dir = null)
+                    <a href="#method___construct">__construct</a>(string $file_name, string $client_file_name = null, string $root_dir = null)
                     <p>
 </p>
                 </td>
@@ -87,7 +89,7 @@
                 </td>
                 <td class="last">
                     <a href="#method_getMime">getMime</a>()
-                    <p>Get the file miem string if possible</p>
+                    <p>Get the file mime string if possible</p>
                 </td>
                 <td></td>
             </tr>
@@ -147,9 +149,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 27</div>
+        <div class="location">at line 33</div>
         <code>            public            
-    <strong>__construct</strong>($file_name, $client_file_name = null, $root_dir = null)</code>
+    <strong>__construct</strong>(string $file_name, string $client_file_name = null, string $root_dir = null)</code>
     </h3>
     <div class="details">
         <p>
@@ -161,22 +163,20 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$file_name</td>
-                <td>
-</td>
+                <td>The path of the file</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$client_file_name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$root_dir</td>
-                <td>
-</td>
+                <td>The absolute path of the root directory</td>
             </tr>
             </table>
 
@@ -187,7 +187,7 @@
     </div>
 
                 <h3 id="method_setClientFilename">
-        <div class="location">at line 43</div>
+        <div class="location">at line 50</div>
         <code>            public            void
     <strong>setClientFilename</strong>(string $file_name)</code>
     </h3>
@@ -218,12 +218,21 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the file name is not a string</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_getClientFilename">
-        <div class="location">at line 61</div>
+        <div class="location">at line 69</div>
         <code>            public            string
     <strong>getClientFilename</strong>()</code>
     </h3>
@@ -248,7 +257,7 @@
     </div>
 
                 <h3 id="method_getFilenameWithoutExtension">
-        <div class="location">at line 71</div>
+        <div class="location">at line 80</div>
         <code>            public            string
     <strong>getFilenameWithoutExtension</strong>()</code>
     </h3>
@@ -282,7 +291,7 @@
     </div>
 
                 <h3 id="method_guessExtension">
-        <div class="location">at line 81</div>
+        <div class="location">at line 91</div>
         <code>            public            string
     <strong>guessExtension</strong>()</code>
     </h3>
@@ -316,12 +325,12 @@
     </div>
 
                 <h3 id="method_getMime">
-        <div class="location">at line 96</div>
+        <div class="location">at line 107</div>
         <code>            public            string
     <strong>getMime</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the file miem string if possible</p>
+        <p>Get the file mime string if possible</p>
         <p>
 </p>
         <div class="tags">
@@ -341,7 +350,7 @@
     </div>
 
                 <h3 id="method_getHumanSize">
-        <div class="location">at line 110</div>
+        <div class="location">at line 122</div>
         <code>            public            string
     <strong>getHumanSize</strong>(int $decimals = 2)</code>
     </h3>
@@ -376,7 +385,7 @@
     </div>
 
                 <h3 id="method_getATimeAsDatetime">
-        <div class="location">at line 119</div>
+        <div class="location">at line 132</div>
         <code>            public            null|object
     <strong>getATimeAsDatetime</strong>()</code>
     </h3>
@@ -401,7 +410,7 @@
     </div>
 
                 <h3 id="method_getCTimeAsDatetime">
-        <div class="location">at line 131</div>
+        <div class="location">at line 145</div>
         <code>            public            null|object
     <strong>getCTimeAsDatetime</strong>()</code>
     </h3>
@@ -426,7 +435,7 @@
     </div>
 
                 <h3 id="method_getMTimeAsDatetime">
-        <div class="location">at line 143</div>
+        <div class="location">at line 158</div>
         <code>            public            null|object
     <strong>getMTimeAsDatetime</strong>()</code>
     </h3>
@@ -451,7 +460,7 @@
     </div>
 
                 <h3 id="method_isImage">
-        <div class="location">at line 155</div>
+        <div class="location">at line 171</div>
         <code>            public            bool
     <strong>isImage</strong>()</code>
     </h3>

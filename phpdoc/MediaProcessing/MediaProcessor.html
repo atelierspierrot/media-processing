@@ -12,6 +12,7 @@
             <li><a href="../classes.html">Classes</a></li>
                             <li><a href="../namespaces.html">Namespaces</a></li>
                         <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
             <li><a href="../doc-index.html">Index</a></li>
             
         </ul>
@@ -22,7 +23,8 @@
     <h1><a href="../MediaProcessing.html">MediaProcessing</a>\MediaProcessor</h1>
     </div>
         <div class="content">
-                <p>class    <strong>MediaProcessor</strong></p>
+                <p>    class
+    <strong>MediaProcessor</strong></p>
 
     
     
@@ -65,10 +67,10 @@
             </tr>
                     <tr>
                 <td class="type">
-                    static&nbsp;object
+                    static&nbsp;<a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_createFromContent">createFromContent</a>($file_content, $filename = null, $client_file_name = null, $return = &#039;\\MediaProcessing\\MediaFile&#039;)
+                    <a href="#method_createFromContent">createFromContent</a>(string $file_content, string $filename = null, string $client_file_name = null, string $return = &#039;\\MediaProcessing\\MediaFile&#039;)
                     <p>Create a file with a content string and returns the created filename</p>
                 </td>
                 <td></td>
@@ -110,12 +112,21 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the path doesn't exist and can't be created</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_getTemporaryDirectory">
-        <div class="location">at line 47</div>
+        <div class="location">at line 48</div>
         <code>        static    public            string
     <strong>getTemporaryDirectory</strong>()</code>
     </h3>
@@ -136,14 +147,23 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the path doesn't exist and can't be created</td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
                 <h3 id="method_createFromContent">
-        <div class="location">at line 69</div>
-        <code>        static    public            object
-    <strong>createFromContent</strong>($file_content, $filename = null, $client_file_name = null, $return = &#039;\\MediaProcessing\\MediaFile&#039;)</code>
+        <div class="location">at line 73</div>
+        <code>        static    public            <a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
+    <strong>createFromContent</strong>(string $file_content, string $filename = null, string $client_file_name = null, string $return = &#039;\\MediaProcessing\\MediaFile&#039;)</code>
     </h3>
     <div class="details">
         <p>Create a file with a content string and returns the created filename</p>
@@ -154,28 +174,25 @@
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$file_content</td>
-                <td>
-</td>
+                <td>The source file content</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$filename</td>
-                <td>
-</td>
+                <td>The target filename (optional - automatic if not set)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$client_file_name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$return</td>
-                <td>
-</td>
+                <td>Name of the class to return</td>
             </tr>
             </table>
 
@@ -184,8 +201,9 @@
 
                     <table>
         <tr>
-            <td>object</td>
-            <td>An instance of \Lib\File class created on the result file</td>
+            <td><a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a></td>
+            <td>
+</td>
         </tr>
     </table>
 
