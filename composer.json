@@ -5,7 +5,7 @@
     "description": "A package to manipulate media files such as images.",
     "keywords": ["file", "media", "filter"],
     "homepage": "http://github.com/atelierspierrot/media-processing",
-    "license": "GPL-3.0",
+    "license": "Apache-2.0",
     "authors": [{
             "name": "Les Ateliers Pierrot & contributors",
             "email": "contact@ateliers-pierrot.fr",
