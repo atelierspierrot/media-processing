@@ -20,4 +20,4 @@ A package to manipulate media files such as images.
 
 >    Les Ateliers Pierrot - Paris, France
 
->    <whttp://ww.ateliers-pierrot.fr/> - <contact@ateliers-pierrot.fr>
+>    <http://www.ateliers-pierrot.fr/> - <contact@ateliers-pierrot.fr>
