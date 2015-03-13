@@ -26,7 +26,7 @@ use \WebFilesystem\WebFileInfo;
 use \WebFilesystem\WebFilesystem;
 
 /**
- * @author  Piero Wbmstr <me@e-piwi.fr>
+ * @author  piwi <me@e-piwi.fr>
  */
 class MediaFile
     extends WebFileInfo

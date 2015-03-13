@@ -27,6 +27,7 @@ use \MediaProcessing\MediaFile;
 use \Library\Helper\Directory as DirectoryHelper;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class ImageFilter
 {

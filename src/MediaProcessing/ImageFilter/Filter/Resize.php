@@ -27,6 +27,7 @@ use MediaProcessing\FilterInterface;
 use MediaProcessing\ImageFilter\ImageFilter;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class Resize
     extends AbstractFilter
