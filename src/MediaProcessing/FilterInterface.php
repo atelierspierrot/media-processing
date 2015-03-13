@@ -23,6 +23,7 @@
 namespace MediaProcessing;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 interface FilterInterface
 {

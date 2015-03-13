@@ -25,6 +25,7 @@ namespace MediaProcessing;
 use \Library\Helper\Directory as DirectoryHelper;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class MediaProcessor
 {

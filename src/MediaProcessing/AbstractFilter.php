@@ -25,6 +25,7 @@ namespace MediaProcessing;
 use \MediaProcessing\MediaFile;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 abstract class AbstractFilter
 {
