@@ -2,7 +2,7 @@
 /**
  * This file is part of the MediaProcessing package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -82,16 +82,22 @@ class ImageFilter
         DirectoryHelper::ensureExists($this->target_directory);
         $this->resetFilters();
 
-        if (!is_null($source)) $this->setSourceFile( $source );
-        elseif (!is_null($source_content)) $this->buildSourceFileFromContent( $source_content );
+        if (!is_null($source)) {
+            $this->setSourceFile($source);
+        } elseif (!is_null($source_content)) {
+            $this->buildSourceFileFromContent($source_content);
+        }
 
-        if (!is_null($target_filename)) $this->setTargetFilename( $target_filename );
+        if (!is_null($target_filename)) {
+            $this->setTargetFilename($target_filename);
+        }
 
         if (!is_null($filter)) {
-            if (is_string($filter))
-                $this->addFilter( $filter, $filter_options );
-            else
-                $this->setFilters( $filter, $filter_options );
+            if (is_string($filter)) {
+                $this->addFilter($filter, $filter_options);
+            } else {
+                $this->setFilters($filter, $filter_options);
+            }
         }
     }
 
@@ -109,7 +115,7 @@ class ImageFilter
     public function setSourceFile($source)
     {
         if (@file_exists($source)) {
-            $_src = new MediaFile( $source );
+            $_src = new MediaFile($source);
             if ($_src->isImage()) {
                 $this->source_file = $_src;
             } else {
@@ -193,7 +199,7 @@ class ImageFilter
     public function setFilters(array $filters, $filters_options = null)
     {
         foreach ($filters as $i=>$_filter) {
-            $this->addFilter( $_filter, is_array($filters_options) && isset($filters_options[$i]) ? $filters_options[$i] : null );
+            $this->addFilter($_filter, is_array($filters_options) && isset($filters_options[$i]) ? $filters_options[$i] : null);
         }
         return $this;
     }
@@ -229,8 +235,9 @@ class ImageFilter
      */
     public function getCache($filename)
     {
-        if (file_exists($this->target_directory.$filename))
+        if (file_exists($this->target_directory.$filename)) {
             return $this->target_directory.$filename;
+        }
         return false;
     }
 
@@ -262,13 +269,13 @@ class ImageFilter
                             $this->filters_options_stack[$_id] : null
                     );
 
-                    $_target_tmp_fn = $_fltr->getTargetFilename( $this->getTargetFilename() );
+                    $_target_tmp_fn = $_fltr->getTargetFilename($this->getTargetFilename());
                     $_target_tmp_fn = md5($_target_tmp_fn);
 
-                    if ($_cached = $this->getCache( $_target_tmp_fn.'.'.$target_extension )) {
-                        $this->setTargetFilename( $_cached );
+                    if ($_cached = $this->getCache($_target_tmp_fn.'.'.$target_extension)) {
+                        $this->setTargetFilename($_cached);
                     } else {
-                        $_target_tmp = $_fltr->process( $this->target_directory.$_target_tmp_fn );
+                        $_target_tmp = $_fltr->process($this->target_directory.$_target_tmp_fn);
                         if (!is_resource($_target_tmp)) {
                             throw new \RuntimeException(
                                 sprintf('The "%s" image filter "process()" method must return a resource (got "%s")!',
@@ -276,7 +283,7 @@ class ImageFilter
                             );
                         }
                         $this->setTargetFilename(
-                            $this->writeTargetFileHandler( $_target_tmp, $_target_tmp_fn.'.'.$target_extension )
+                            $this->writeTargetFileHandler($_target_tmp, $_target_tmp_fn.'.'.$target_extension)
                         );
                     }
                 } else {
@@ -305,10 +312,12 @@ class ImageFilter
     public function buildSourceFileHandler()
     {
         $_ext = $this->source_file->getExtension();
-        if (strtolower($_ext)==='jpg') $_ext = 'jpeg';
+        if (strtolower($_ext)==='jpg') {
+            $_ext = 'jpeg';
+        }
         $_fct = 'imagecreatefrom'.strtolower($_ext);
         if (function_exists($_fct)) {
-            return $_fct( $this->source_file->getRealPath() );
+            return $_fct($this->source_file->getRealPath());
         } else {
             throw new \RuntimeException(
                 sprintf('Unknown image extension "%s" for resource creation!', $_ext)
@@ -327,10 +336,12 @@ class ImageFilter
     public function writeTargetFileHandler($_handler, $filename)
     {
         $_ext = $this->source_file->getExtension();
-        if (strtolower($_ext)==='jpg') $_ext = 'jpeg';
+        if (strtolower($_ext)==='jpg') {
+            $_ext = 'jpeg';
+        }
         $_fct = 'image'.$_ext;
         if (function_exists($_fct)) {
-            $_fct( $_handler, $this->target_directory.$filename );
+            $_fct($_handler, $this->target_directory.$filename);
             return $this->target_directory.$filename;
         } else {
             throw new \RuntimeException(
@@ -355,7 +366,7 @@ class ImageFilter
     public function buildSourceFileFromContent($source_content)
     {
         $finfo = new \finfo();
-        $mime = $finfo->buffer( $source_content, FILEINFO_MIME_TYPE );
+        $mime = $finfo->buffer($source_content, FILEINFO_MIME_TYPE);
         $extension = str_replace('image/', '', $mime);
         $_tmp_filename = 'tmp_'.time().'.'.$extension;
         $_tmp_filepath = $this->target_directory.$_tmp_filename;
@@ -364,7 +375,7 @@ class ImageFilter
             fwrite($_tf, $source_content);
             fclose($_tf);
             $this->target_filename_tmp = $_tmp_filepath;
-            return $this->setSourceFile( $_tmp_filepath );
+            return $this->setSourceFile($_tmp_filepath);
         }
         return null;
     }
@@ -390,14 +401,11 @@ class ImageFilter
             $height_new = $original_height;
         } elseif ($original_width>$original_height) {
             $width_new = $max_width;
-            $height_new = round( ($max_width/$original_width)*$original_height );
+            $height_new = round(($max_width/$original_width)*$original_height);
         } else {
             $height_new = $max_height;
-            $width_new = round( ($max_height/$original_height)*$original_width );
+            $width_new = round(($max_height/$original_height)*$original_width);
         }
         return true===$associative ? array('width'=>$width_new, 'height'=>$height_new) : array($width_new, $height_new);
     }
-
 }
-
-// Endfile

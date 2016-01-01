@@ -2,7 +2,7 @@
 /**
  * This file is part of the MediaProcessing package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ interface FilterInterface
      * @param   string  $target_filename The target filename
      * @return  string  A unique and constant filename depending on filter settings and source file with NO extension
      */
-    public function getTargetFilename( $target_filename );
+    public function getTargetFilename($target_filename);
 
     /**
      * The filter processing method, must return an file resource
@@ -45,8 +45,5 @@ interface FilterInterface
      * @param   string      $target_filename The target filename
      * @return  resource    Returns a resource image of the filtered source, ready to be written in the target file
      */
-    public function process( $target_filename );
-
+    public function process($target_filename);
 }
-
-// Endfile

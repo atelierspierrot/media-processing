@@ -2,7 +2,7 @@
 /**
  * This file is part of the MediaProcessing package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -77,10 +77,10 @@ class Resize
      * @param   string  $target_filename The target filename
      * @return  string  A unique and constant filename depending on filter settings and source file with NO extension
      */
-    public function getTargetFilename( $target_filename )
+    public function getTargetFilename($target_filename)
     {
         $this->calculateTargetSizes();
-        $_tf = $this->source_file->getBasename( '.'.$this->source_file->getExtension() )
+        $_tf = $this->source_file->getBasename('.'.$this->source_file->getExtension())
             .'_resize_'
             .$this->target_width.'x'.$this->target_height
             .'.'.$this->source_file->getExtension();
@@ -142,7 +142,7 @@ class Resize
      * @return  resource    Returns a resource image of the filtered source, ready to be written in the target file
      * @throws  \RuntimeException if the image can't be created or resized
      */
-    public function process( $target_filename )
+    public function process($target_filename)
     {
         $this
             ->calculateSourceHandlerSizes()
@@ -162,7 +162,4 @@ class Resize
 
         return $tmp_target;
     }
-
 }
-
-// Endfile

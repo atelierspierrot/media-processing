@@ -2,7 +2,7 @@
 /**
  * This file is part of the MediaProcessing package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,7 +46,9 @@ class MediaFile
     public function __construct($file_name, $client_file_name = null, $root_dir = null)
     {
         parent::__construct($file_name, $root_dir);
-        if (!is_null($client_file_name)) $this->setClientFilename( $client_file_name );
+        if (!is_null($client_file_name)) {
+            $this->setClientFilename($client_file_name);
+        }
     }
 
 // -----------------
@@ -60,13 +62,14 @@ class MediaFile
      * @return  void
      * @throws  \InvalidArgumentException if the file name is not a string
      */
-    public function setClientFilename( $file_name )
+    public function setClientFilename($file_name)
     {
         if (is_string($file_name)) {
             $this->client_file_name = $file_name;
             $_ext = $this->guessExtension();
-            if (!empty($_ext) && !strstr($file_name, $_ext))
+            if (!empty($_ext) && !strstr($file_name, $_ext)) {
                 $this->client_file_name .= '.'.$_ext;
+            }
         } else {
             throw new \InvalidArgumentException(
                 sprintf('Client name of a file must be a string (got "%s")!', gettype($file_name))
@@ -92,7 +95,7 @@ class MediaFile
      */
     public function getFilenameWithoutExtension()
     {
-        return $this->getBasename( '.'.$this->getExtension() );
+        return $this->getBasename('.'.$this->getExtension());
     }
 
     /**
@@ -106,7 +109,7 @@ class MediaFile
         $_ext = $this->getExtension();
         if (empty($_ext) && $this->getRealPath()) {
             $finfo = new \finfo();
-            $mime = $finfo->file( $this->getRealPath(), FILEINFO_MIME_TYPE );
+            $mime = $finfo->file($this->getRealPath(), FILEINFO_MIME_TYPE);
             $_ext = str_replace('image/', '', $mime);
         }
         return $_ext;
@@ -121,7 +124,7 @@ class MediaFile
     {
         if ($this->getRealPath()) {
             $finfo = new \finfo();
-            return $finfo->file( $this->getRealPath(), FILEINFO_MIME_TYPE );
+            return $finfo->file($this->getRealPath(), FILEINFO_MIME_TYPE);
         }
         return null;
     }
@@ -145,8 +148,9 @@ class MediaFile
     public function getATimeAsDatetime()
     {
         $_date = $this->getATime();
-        if (!empty($_date))
-            return \DateTime::createFromFormat( 'U', $_date );
+        if (!empty($_date)) {
+            return \DateTime::createFromFormat('U', $_date);
+        }
         return null;
     }
 
@@ -158,8 +162,9 @@ class MediaFile
     public function getCTimeAsDatetime()
     {
         $_date = $this->getCTime();
-        if (!empty($_date))
-            return \DateTime::createFromFormat( 'U', $_date );
+        if (!empty($_date)) {
+            return \DateTime::createFromFormat('U', $_date);
+        }
         return null;
     }
 
@@ -171,8 +176,9 @@ class MediaFile
     public function getMTimeAsDatetime()
     {
         $_date = $this->getMTime();
-        if (!empty($_date))
-            return \DateTime::createFromFormat( 'U', $_date );
+        if (!empty($_date)) {
+            return \DateTime::createFromFormat('U', $_date);
+        }
         return null;
     }
 
@@ -184,9 +190,6 @@ class MediaFile
     public function isImage()
     {
         $finfo = new \finfo();
-        return (0!=preg_match('#^image/(.*)$#', $finfo->file( $this->getRealPath(), FILEINFO_MIME_TYPE )));
+        return (0!=preg_match('#^image/(.*)$#', $finfo->file($this->getRealPath(), FILEINFO_MIME_TYPE)));
     }
-
 }
-
-// Endfile
