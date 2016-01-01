@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -72,7 +75,8 @@
     </div>
 
     <p>    interface
-    <strong>FilterInterface</strong></p>
+    <strong>FilterInterface</strong>
+</p>
 
     
     
@@ -83,19 +87,23 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getTargetFilename">getTargetFilename</a>(string $target_filename)
+                    <a href="#method_getTargetFilename">getTargetFilename</a>(
+    string $target_filename)
                                             <p>Build the target filename</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    resource
+                    
+    resource
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_process">process</a>(string $target_filename)
+                    <a href="#method_process">process</a>(
+    string $target_filename)
                                             <p>The filter processing method, must return an file resource</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -107,9 +115,11 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getTargetFilename">
-        <div class="location">at line 39</div>
-        <code>                    string
-    <strong>getTargetFilename</strong>(string $target_filename)</code>
+        <div class="location">at line 40</div>
+        <code>                    
+    string
+    <strong>getTargetFilename</strong>(
+    string $target_filename)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -120,7 +130,8 @@ to allow caching the result file, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$target_filename</td>
                 <td>The target filename</td>
             </tr>
@@ -131,7 +142,8 @@ to allow caching the result file, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>A unique and constant filename depending on filter settings and source file with NO extension</td>
         </tr>
     </table>
@@ -144,9 +156,11 @@ to allow caching the result file, and retrieving it.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at line 47</div>
-        <code>                    resource
-    <strong>process</strong>(string $target_filename)</code>
+        <div class="location">at line 48</div>
+        <code>                    
+    resource
+    <strong>process</strong>(
+    string $target_filename)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -156,7 +170,8 @@ to allow caching the result file, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$target_filename</td>
                 <td>The target filename</td>
             </tr>
@@ -167,7 +182,8 @@ to allow caching the result file, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>resource</td>
+            <td>
+    resource</td>
             <td>Returns a resource image of the filtered source, ready to be written in the target file</td>
         </tr>
     </table>

@@ -7,9 +7,12 @@
     "homepage": "http://github.com/atelierspierrot/media-processing",
     "license": "Apache-2.0",
     "authors": [{
-            "name": "Les Ateliers Pierrot & contributors",
-            "email": "contact@ateliers-pierrot.fr",
-            "homepage": "http://www.ateliers-pierrot.fr/"
+        "name": "Les Ateliers Pierrot & contributors",
+        "email": "contact@ateliers-pierrot.fr",
+        "homepage": "http://www.ateliers-pierrot.fr/"
+    },{
+        "name": "Pierre Cassat",
+        "homepage": "http://e-piwi.fr/"
     }],
     "require": {
         "php": ">=5.3.0",
@@ -19,9 +22,15 @@
     },
     "require-dev": {
         "sami/sami": "@stable",
+        "fabpot/php-cs-fixer": "@stable",
         "phpmd/phpmd" : "@stable"
     },
-    "autoload": { "psr-0": { "MediaProcessing": "src/" } },
+    "autoload": { "psr-4": { "MediaProcessing\\": "src/MediaProcessing/" } },
+    "scripts": {
+        "build-doc": "php vendor/bin/sami.php update .sami.php",
+        "update-doc": "php vendor/bin/sami.php update .sami.php",
+        "cs-fixer": "php vendor/bin/php-cs-fixer fix -v"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.1-dev"

@@ -2,7 +2,7 @@
 /**
  * This file is part of the MediaProcessing package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -90,7 +90,7 @@ class MediaProcessor
         $mime = $finfo->buffer($file_content, FILEINFO_MIME_TYPE);
         $extension = end(explode('/', $mime));
         if (is_null($filename)) {
-            $_tmp_filename = md5( $file_content ).'.'.$extension;
+            $_tmp_filename = md5($file_content).'.'.$extension;
             $filename = self::getTemporaryDirectory().$_tmp_filename;
             if (file_exists($filename)) {
                 return new $return($filename, $client_file_name);
@@ -107,7 +107,4 @@ class MediaProcessor
         }
         return null;
     }
-
 }
-
-// Endfile

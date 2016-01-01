@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -72,7 +75,8 @@
     </div>
 
     <p>    class
-    <strong>MediaFile</strong>        extends <abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></p>
+    <strong>MediaFile</strong>        extends <abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr>
+</p>
 
     
     
@@ -84,25 +88,32 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $file_name, string $client_file_name = null, string $root_dir = null)
+                    <a href="#method___construct">__construct</a>(
+    string $file_name, 
+    string $client_file_name = null, 
+    string $root_dir = null)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setClientFilename">setClientFilename</a>(string $file_name)
+                    <a href="#method_setClientFilename">setClientFilename</a>(
+    string $file_name)
                                             <p>Set the client filename</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getClientFilename">getClientFilename</a>()
@@ -111,7 +122,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFilenameWithoutExtension">getFilenameWithoutExtension</a>()
@@ -120,7 +132,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_guessExtension">guessExtension</a>()
@@ -129,7 +142,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getMime">getMime</a>()
@@ -138,16 +152,19 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getHumanSize">getHumanSize</a>(int $decimals = 2)
+                    <a href="#method_getHumanSize">getHumanSize</a>(
+    int $decimals = 2)
                                             <p>Get the file size in human readable string</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|object
+                    
+    null|object
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getATimeAsDatetime">getATimeAsDatetime</a>()
@@ -156,7 +173,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|object
+                    
+    null|object
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getCTimeAsDatetime">getCTimeAsDatetime</a>()
@@ -165,7 +183,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|object
+                    
+    null|object
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getMTimeAsDatetime">getMTimeAsDatetime</a>()
@@ -174,7 +193,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isImage">isImage</a>()
@@ -191,7 +211,11 @@
                     <h3 id="method___construct">
         <div class="location">at line 46</div>
         <code>                    
-    <strong>__construct</strong>(string $file_name, string $client_file_name = null, string $root_dir = null)</code>
+    
+    <strong>__construct</strong>(
+    string $file_name, 
+    string $client_file_name = null, 
+    string $root_dir = null)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -199,18 +223,21 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$file_name</td>
                 <td>The path of the file</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$client_file_name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$root_dir</td>
                 <td>The absolute path of the root directory</td>
             </tr>
@@ -225,9 +252,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setClientFilename">
-        <div class="location">at line 63</div>
-        <code>                    void
-    <strong>setClientFilename</strong>(string $file_name)</code>
+        <div class="location">at line 65</div>
+        <code>                    
+    void
+    <strong>setClientFilename</strong>(
+    string $file_name)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -237,7 +266,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$file_name</td>
                 <td>The client filename for the file</td>
             </tr>
@@ -248,7 +278,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -259,7 +290,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the file name is not a string</td>
             </tr>
             </table>
@@ -271,8 +302,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getClientFilename">
-        <div class="location">at line 82</div>
-        <code>                    string
+        <div class="location">at line 85</div>
+        <code>                    
+    string
     <strong>getClientFilename</strong>()</code>
     </h3>
     <div class="details">
@@ -284,7 +316,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The client filename</td>
         </tr>
     </table>
@@ -297,8 +330,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFilenameWithoutExtension">
-        <div class="location">at line 93</div>
-        <code>                    string
+        <div class="location">at line 96</div>
+        <code>                    
+    string
     <strong>getFilenameWithoutExtension</strong>()</code>
     </h3>
     <div class="details">
@@ -310,7 +344,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The isolated filename</td>
         </tr>
     </table>
@@ -332,8 +367,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_guessExtension">
-        <div class="location">at line 104</div>
-        <code>                    string
+        <div class="location">at line 107</div>
+        <code>                    
+    string
     <strong>guessExtension</strong>()</code>
     </h3>
     <div class="details">
@@ -345,7 +381,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The guessed extension</td>
         </tr>
     </table>
@@ -367,8 +404,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMime">
-        <div class="location">at line 120</div>
-        <code>                    string
+        <div class="location">at line 123</div>
+        <code>                    
+    string
     <strong>getMime</strong>()</code>
     </h3>
     <div class="details">
@@ -380,7 +418,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The mime type info</td>
         </tr>
     </table>
@@ -393,9 +432,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHumanSize">
-        <div class="location">at line 135</div>
-        <code>                    string
-    <strong>getHumanSize</strong>(int $decimals = 2)</code>
+        <div class="location">at line 138</div>
+        <code>                    
+    string
+    <strong>getHumanSize</strong>(
+    int $decimals = 2)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -405,7 +446,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$decimals</td>
                 <td>The decimals number to use in calculated file size</td>
             </tr>
@@ -416,7 +458,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>A human readable string describing a file size</td>
         </tr>
     </table>
@@ -429,8 +472,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getATimeAsDatetime">
-        <div class="location">at line 145</div>
-        <code>                    null|object
+        <div class="location">at line 148</div>
+        <code>                    
+    null|object
     <strong>getATimeAsDatetime</strong>()</code>
     </h3>
     <div class="details">
@@ -442,7 +486,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|object</td>
+            <td>
+    null|object</td>
             <td>The datetime object if so</td>
         </tr>
     </table>
@@ -455,8 +500,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCTimeAsDatetime">
-        <div class="location">at line 158</div>
-        <code>                    null|object
+        <div class="location">at line 162</div>
+        <code>                    
+    null|object
     <strong>getCTimeAsDatetime</strong>()</code>
     </h3>
     <div class="details">
@@ -468,7 +514,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|object</td>
+            <td>
+    null|object</td>
             <td>The datetime object if so</td>
         </tr>
     </table>
@@ -481,8 +528,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMTimeAsDatetime">
-        <div class="location">at line 171</div>
-        <code>                    null|object
+        <div class="location">at line 176</div>
+        <code>                    
+    null|object
     <strong>getMTimeAsDatetime</strong>()</code>
     </h3>
     <div class="details">
@@ -494,7 +542,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|object</td>
+            <td>
+    null|object</td>
             <td>The datetime object if so</td>
         </tr>
     </table>
@@ -507,8 +556,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isImage">
-        <div class="location">at line 184</div>
-        <code>                    bool
+        <div class="location">at line 190</div>
+        <code>                    
+    bool
     <strong>isImage</strong>()</code>
     </h3>
     <div class="details">
@@ -520,7 +570,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>True if the file seems to be an image, false otherwise</td>
         </tr>
     </table>

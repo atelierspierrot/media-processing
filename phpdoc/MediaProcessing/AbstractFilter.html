@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -71,8 +74,9 @@
         <h1>AbstractFilter</h1>
     </div>
 
-    <p>abstract     class
-    <strong>AbstractFilter</strong></p>
+    <p>    class
+    <strong>AbstractFilter</strong>
+</p>
 
     
     
@@ -84,9 +88,13 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a> $source_file, resource $source_handler, array $options = null)
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr> $source_file, 
+    resource $source_handler, 
+    array $options = null)
                                             <p>Construction of a filter</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -98,9 +106,13 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 60</div>
+        <div class="location">at line 61</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a> $source_file, resource $source_handler, array $options = null)</code>
+    
+    <strong>__construct</strong>(
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr> $source_file, 
+    resource $source_handler, 
+    array $options = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -110,17 +122,20 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a></td>
+                <td>
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr></td>
                 <td>$source_file</td>
                 <td>The source file to work on</td>
             </tr>
                     <tr>
-                <td>resource</td>
+                <td>
+    resource</td>
                 <td>$source_handler</td>
                 <td>A resource of temporary image created in MIME type of the source</td>
             </tr>
                     <tr>
-                <td>array</td>
+                <td>
+    array</td>
                 <td>$options</td>
                 <td>A set of options to override default options</td>
             </tr>
@@ -132,7 +147,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the <code>$source_handler</code> is not a valid resource</td>
             </tr>
             </table>

@@ -12,6 +12,9 @@
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -75,7 +78,8 @@
 
     <p>    class
     <strong>Resize</strong>        extends <a href="../../../MediaProcessing/AbstractFilter.html"><abbr title="MediaProcessing\AbstractFilter">AbstractFilter</abbr></a>        implements
-        <a href="../../../MediaProcessing/FilterInterface.html"><abbr title="MediaProcessing\FilterInterface">FilterInterface</abbr></a></p>
+        <a href="../../../MediaProcessing/FilterInterface.html"><abbr title="MediaProcessing\FilterInterface">FilterInterface</abbr></a>
+</p>
 
     
     
@@ -87,24 +91,32 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a> $source_file, resource $source_handler, array $options = null)
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr> $source_file, 
+    resource $source_handler, 
+    array $options = null)
                                             <p>Construction of a filter</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../MediaProcessing/AbstractFilter.html#method___construct"><abbr title="MediaProcessing\AbstractFilter">AbstractFilter</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../../MediaProcessing/AbstractFilter.html#method___construct"><abbr title="MediaProcessing\AbstractFilter">AbstractFilter</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getTargetFilename">getTargetFilename</a>(string $target_filename)
+                    <a href="#method_getTargetFilename">getTargetFilename</a>(
+    string $target_filename)
                                             <p>Build the target filename</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
+                    
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_calculateSourceHandlerSizes">calculateSourceHandlerSizes</a>()
@@ -113,7 +125,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
+                    
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_calculateTargetSizes">calculateTargetSizes</a>()
@@ -122,10 +135,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    resource
+                    
+    resource
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_process">process</a>(string $target_filename)
+                    <a href="#method_process">process</a>(
+    string $target_filename)
                                             <p>The filter processing method, must return an image resource</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -137,9 +152,14 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../MediaProcessing/AbstractFilter.html#method___construct"><abbr title="MediaProcessing\AbstractFilter">AbstractFilter</abbr></a> at line 60</div>
+        <div class="location">in 
+    <a href="../../../MediaProcessing/AbstractFilter.html#method___construct"><abbr title="MediaProcessing\AbstractFilter">AbstractFilter</abbr></a> at line 61</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a> $source_file, resource $source_handler, array $options = null)</code>
+    
+    <strong>__construct</strong>(
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr> $source_file, 
+    resource $source_handler, 
+    array $options = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -149,17 +169,20 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a></td>
+                <td>
+    <abbr title="MediaProcessing\MediaProcessing\MediaFile">MediaFile</abbr></td>
                 <td>$source_file</td>
                 <td>The source file to work on</td>
             </tr>
                     <tr>
-                <td>resource</td>
+                <td>
+    resource</td>
                 <td>$source_handler</td>
                 <td>A resource of temporary image created in MIME type of the source</td>
             </tr>
                     <tr>
-                <td>array</td>
+                <td>
+    array</td>
                 <td>$options</td>
                 <td>A set of options to override default options</td>
             </tr>
@@ -171,7 +194,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the <code>$source_handler</code> is not a valid resource</td>
             </tr>
             </table>
@@ -183,9 +206,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTargetFilename">
-        <div class="location">at line 79</div>
-        <code>                    string
-    <strong>getTargetFilename</strong>(string $target_filename)</code>
+        <div class="location">at line 80</div>
+        <code>                    
+    string
+    <strong>getTargetFilename</strong>(
+    string $target_filename)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -196,7 +221,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$target_filename</td>
                 <td>The target filename</td>
             </tr>
@@ -207,7 +233,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>A unique and constant filename depending on filter settings and source file with NO extension</td>
         </tr>
     </table>
@@ -220,8 +247,9 @@ to allow caching the result image, and retrieving it.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_calculateSourceHandlerSizes">
-        <div class="location">at line 94</div>
-        <code>                    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
+        <div class="location">at line 95</div>
+        <code>                    
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
     <strong>calculateSourceHandlerSizes</strong>()</code>
     </h3>
     <div class="details">
@@ -233,7 +261,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a></td>
+            <td>
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -247,8 +276,9 @@ to allow caching the result image, and retrieving it.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_calculateTargetSizes">
-        <div class="location">at line 110</div>
-        <code>                    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
+        <div class="location">at line 111</div>
+        <code>                    
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a>
     <strong>calculateTargetSizes</strong>()</code>
     </h3>
     <div class="details">
@@ -260,7 +290,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a></td>
+            <td>
+    <a href="../../../MediaProcessing/ImageFilter/Filter/Resize.html"><abbr title="MediaProcessing\ImageFilter\Filter\Resize">Resize</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -274,9 +305,11 @@ to allow caching the result image, and retrieving it.</p>            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_process">
-        <div class="location">at line 144</div>
-        <code>                    resource
-    <strong>process</strong>(string $target_filename)</code>
+        <div class="location">at line 145</div>
+        <code>                    
+    resource
+    <strong>process</strong>(
+    string $target_filename)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -286,7 +319,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$target_filename</td>
                 <td>The target filename</td>
             </tr>
@@ -297,7 +331,8 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>resource</td>
+            <td>
+    resource</td>
             <td>Returns a resource image of the filtered source, ready to be written in the target file</td>
         </tr>
     </table>
@@ -307,7 +342,7 @@ to allow caching the result image, and retrieving it.</p>            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
                 <td>if the image can't be created or resized</td>
             </tr>
             </table>

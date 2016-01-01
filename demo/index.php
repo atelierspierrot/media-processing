@@ -7,7 +7,7 @@
  * `E_ALL & ~E_STRICT` => for hard dev in PHP5.4 avoiding strict warnings
  * `E_ALL & ~E_NOTICE & ~E_STRICT` => classic setting
  */
-@ini_set('display_errors','1'); @error_reporting(E_ALL);
+@ini_set('display_errors', '1'); @error_reporting(E_ALL);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_STRICT);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 
@@ -29,7 +29,9 @@ function _getSecuredRealPath($path, $depth_from_root = 1)
 {
     $ds = DIRECTORY_SEPARATOR;
     $parts = explode($ds, realpath('.'));
-    for ($i=0; $i<=$depth_from_root; $i++) array_pop($parts);
+    for ($i=0; $i<=$depth_from_root; $i++) {
+        array_pop($parts);
+    }
     return str_replace(join($ds, $parts), $ds.'[***]', $path);
 }
 
@@ -49,7 +51,7 @@ if (file_exists($autoloader)) {
     die('You need to run Composer on the package to install dependencies');
 }
 
-function getPhpClassManualLink( $class_name, $ln='en' )
+function getPhpClassManualLink($class_name, $ln='en')
 {
     return sprintf('http://php.net/manual/%s/class.%s.php', $ln, strtolower($class_name));
 }
@@ -137,10 +139,9 @@ echo '&lt;?php'."\n"
 $test_img = 'media/plant3.jpg';
 $test_noext = 'media/test1234';
 
-foreach( array($test_img, $test_noext) as $_f)
-{
-    $a = new \MediaProcessing\MediaFile( $_f, null, __DIR__ );
-    echo 'object : '.var_export($a,1)."\n";
+foreach (array($test_img, $test_noext) as $_f) {
+    $a = new \MediaProcessing\MediaFile($_f, null, __DIR__);
+    echo 'object : '.var_export($a, 1)."\n";
     echo 'filename : '.$a->getFilename()."\n";
     echo 'file basename : '.$a->getBasename()."\n";
     echo 'file extension : '.$a->getExtension()."\n";
@@ -149,11 +150,11 @@ foreach( array($test_img, $test_noext) as $_f)
     echo 'file real path : '.$a->getRealPath()."\n";
     echo 'file size : '.$a->getSize()."\n";
     echo 'file size human readable : '.$a->getHumanSize()."\n";
-    echo 'file stats : '.var_export($a->getStat(),1)."\n";
-    echo 'file aTime as DateTime : '.var_export($a->getATimeAsDatetime(),1)."\n";
-    echo 'file cTime as DateTime : '.var_export($a->getCTimeAsDatetime(),1)."\n";
-    echo 'file mTime as DateTime : '.var_export($a->getMTimeAsDatetime(),1)."\n";
-    echo 'file is image ? : '.var_export($a->isImage(),1)."\n";
+    echo 'file stats : '.var_export($a->getStat(), 1)."\n";
+    echo 'file aTime as DateTime : '.var_export($a->getATimeAsDatetime(), 1)."\n";
+    echo 'file cTime as DateTime : '.var_export($a->getCTimeAsDatetime(), 1)."\n";
+    echo 'file mTime as DateTime : '.var_export($a->getMTimeAsDatetime(), 1)."\n";
+    echo 'file is image ? : '.var_export($a->isImage(), 1)."\n";
     echo 'file mime type ? : '.$a->getMime()."\n";
     echo "\n\n";
 }
@@ -165,7 +166,7 @@ foreach( array($test_img, $test_noext) as $_f)
     <pre class="code" data-language="php">
 <?php
 $test_img = 'media/plant1.jpg';
-$_img = new \MediaProcessing\ImageFilter\ImageFilter( __DIR__.'/'.$test_img, null, 'resize', array('max_width'=>200,'max_height'=>200) );
+$_img = new \MediaProcessing\ImageFilter\ImageFilter(__DIR__.'/'.$test_img, null, 'resize', array('max_width'=>200, 'max_height'=>200));
 $_result = $_img->process()->getTargetWebPath();
 echo '$test_img = "media/plant1.jpg";'."\n";
 echo '$_img = new \MediaProcessing\ImageFilter\ImageFilter('."\n"

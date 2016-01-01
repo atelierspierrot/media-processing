@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -72,7 +75,8 @@
     </div>
 
     <p>    class
-    <strong>MediaProcessor</strong></p>
+    <strong>MediaProcessor</strong>
+</p>
 
     
     
@@ -82,7 +86,8 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_tmp_directory">
-                    static                                                            string
+                    static                                                            
+    string
                 </td>
                 <td>$tmp_directory</td>
                 <td class="last">
@@ -97,16 +102,19 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;void
+                    static&nbsp;
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setTemporaryDirectory">setTemporaryDirectory</a>(string $path)
+                    <a href="#method_setTemporaryDirectory">setTemporaryDirectory</a>(
+    string $path)
                                             <p>Sets the temporary directory</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;string
+                    static&nbsp;
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTemporaryDirectory">getTemporaryDirectory</a>()
@@ -115,10 +123,15 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
+                    static&nbsp;
+    <a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createFromContent">createFromContent</a>(string $file_content, string $filename = null, string $client_file_name = null, string $return = &#039;\\MediaProcessing\\MediaFile&#039;)
+                    <a href="#method_createFromContent">createFromContent</a>(
+    string $file_content, 
+    string $filename = null, 
+    string $client_file_name = null, 
+    string $return = &#039;\\MediaProcessing\\MediaFile&#039;)
                                             <p>Create a file with a content string and returns the created filename</p>                </div>
                 <div class="col-md-2"></div>
             </div>
@@ -130,9 +143,11 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_setTemporaryDirectory">
-        <div class="location">at line 43</div>
-        <code>        static            void
-    <strong>setTemporaryDirectory</strong>(string $path)</code>
+        <div class="location">at line 44</div>
+        <code>        static            
+    void
+    <strong>setTemporaryDirectory</strong>(
+    string $path)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -142,7 +157,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>the directory path</td>
             </tr>
@@ -153,7 +169,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -164,7 +181,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the path doesn't exist and can't be created</td>
             </tr>
             </table>
@@ -176,8 +193,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTemporaryDirectory">
-        <div class="location">at line 61</div>
-        <code>        static            string
+        <div class="location">at line 62</div>
+        <code>        static            
+    string
     <strong>getTemporaryDirectory</strong>()</code>
     </h3>
     <div class="details">
@@ -189,7 +207,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>
@@ -200,7 +219,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the path doesn't exist and can't be created</td>
             </tr>
             </table>
@@ -212,9 +231,14 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createFromContent">
-        <div class="location">at line 86</div>
-        <code>        static            <a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
-    <strong>createFromContent</strong>(string $file_content, string $filename = null, string $client_file_name = null, string $return = &#039;\\MediaProcessing\\MediaFile&#039;)</code>
+        <div class="location">at line 87</div>
+        <code>        static            
+    <a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a>
+    <strong>createFromContent</strong>(
+    string $file_content, 
+    string $filename = null, 
+    string $client_file_name = null, 
+    string $return = &#039;\\MediaProcessing\\MediaFile&#039;)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -224,23 +248,27 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$file_content</td>
                 <td>The source file content</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$filename</td>
                 <td>The target filename (optional - automatic if not set)</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$client_file_name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$return</td>
                 <td>Name of the class to return</td>
             </tr>
@@ -251,7 +279,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a></td>
+            <td>
+    <a href="../MediaProcessing/MediaFile.html"><abbr title="MediaProcessing\MediaFile">MediaFile</abbr></a></td>
             <td>
 </td>
         </tr>
